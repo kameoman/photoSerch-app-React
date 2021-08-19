@@ -4,11 +4,12 @@ import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
 
 const App = () => {
+  const ApiKey = process.env.React_APP_PIXABAY_API_KEY;
   const [images, setImages] = useState([]);
   const onSearchSubmit = async (term) => {
     try {
       const params = {
-        key: ,
+        key: ApiKey,
         // 検索キーワード
         q: term,
       };

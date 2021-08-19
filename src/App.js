@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import ImageList from "./components/ImageList";
+import logo from './logo.png';
 
 const App = () => {
   const ApiKey = process.env.React_APP_PIXABAY_API_KEY;
@@ -27,6 +28,7 @@ const App = () => {
   };
   return (
     <div className="ui container" style={{ marginTop: "20px" }}>
+      <img src={logo} alt='pixabay-logo' className='pixabay-logo'/>
       <SearchBar onSubmit={onSearchSubmit} />
       <ImageList images={images} />
     </div>

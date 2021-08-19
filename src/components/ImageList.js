@@ -1,4 +1,7 @@
 import React from "react";
+import Masonry from "react-masonry-component";
+
+import '../styles/ImageList.css';
 
 const ImageList = (props) => {
   // mapで全てのデータを配列で取得する
@@ -17,7 +20,7 @@ const ImageList = (props) => {
       </a>
     );
   });
-  return <div>{images}</div>;
+  return <Masonry className="image-list">{images}</Masonry>;
 };
 
 export default ImageList;
